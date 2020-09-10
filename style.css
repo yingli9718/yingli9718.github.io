@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+/*Overall*/
+body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#333333;
+	font-size:11px;
+	background-color: #FFD9B3;
+}
+#container{margin:0 auto;background:#fbfbf9;border:solid 1px #FFF;width:860px; min-height:700px;}
+h2{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#003333;font-weight:bold;padding:5px 0; border-bottom:solid 1px #666;margin:10px;text-transform:uppercase;}
+h1{font-family:Arial, Helvetica, sans-serif;font-size:25px;color:#4A5A3D;font-weight:normal;margin:22px 0px 10px 10px;text-transform:uppercase;}
+p{margin:10px 10px 20px 10px;line-height:16px;text-align:justify;}
+.image{border:#CCCCCC solid 1px;float:left;padding:5px;margin:10px 10px 5px;}
+.clearfix:after {content: ".";display: block;height:1px;clear: both;visibility: hidden;}
+/* Esconde de IE-mac \*/
+* html .clearfix {height: 1px;}
+.clearfix {display: block;}
+/* Fin esconde de IE-mac */
+
+/*bar top*/
+#top{margin:15px 10px;background:#efefef;width:840px;min-height:145px;float:left;}
+#menu{margin:5px 0 0 4px;}
+#menu ul {list-style:none;padding:0;margin:0;}
+#menu li {margin:0 5px 0 0;float:left;width:103px;background:#F7F7F7;text-align:center;border:1px solid #CCCCCC;}
+#menu li:hover{background:#999999  0 -32px;}
+#menu li a {voice-family: "\"}\"";voice-family:inherit;text-decoration:none;padding:3px 0 3px 0; text-transform:uppercase;font-size:9px;}		
+#menu li a:link, #menu li a:visited{color:#4A5A3D;display:block;}	
+#menu li a:hover{color:#FFF;}
+#menu li span {padding:0;font-size:12px;}
+
+/*Left Column*/
+#column-left{margin:0 0 0 10px;width:600px;min-height:200px;float:left;}
+.left{float:left;width:600px;padding:5px 0;background:#F7F7F7;border:#CCCCCC 1px solid; margin:0 0 15px 0;}
+
+/*Right Column*/
+.right{margin:0 10px 0 0;background:#F7F7F7;border:#CCCCCC solid 1px;width:220px;min-height:200px;float:right;padding:0 0 10px 0;}
+.right a{padding:0 0 0 10px;font-weight:bold;color:#666;text-decoration:none;line-height:20px;}
+.right a:hover{color:#4A5A3D;text-decoration:underline;}
+
+/*down top*/
+#down{margin:10px;padding:10px 0;border:1px #CCC solid;width:860px;color:#333333;text-align:center;background:#efefef;float:left;}
+#down a{color:#333333;text-decoration:none;line-height:20px;}
+#down a:hover{color:#4A5A3D;text-decoration:underline;}
