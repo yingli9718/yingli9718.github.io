@@ -27,7 +27,7 @@ p{margin:10px 10px 20px 10px;line-height:18px;text-align:justify;}
 #menu li a {voice-family: "\"}\"";voice-family:inherit;text-decoration:none;padding:3px 0 3px 0; text-transform:uppercase;font-size:9px;}		
 #menu li a:link, #menu li a:visited{color:#4A5A3D;display:block;}	
 #menu li a:hover{color:#FFF;}
-#menu li span {padding:0;font-size:12px;}
+#menu li span {padding:0;font-size:13px;}
 
 /*Left Column*/
 #column-left{margin:0 0 0 10px;width:640px;min-height:200px;float:left;}
