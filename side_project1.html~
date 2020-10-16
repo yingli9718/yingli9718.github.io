@@ -59,27 +59,6 @@
   <!-- end .top -->
 
   <div id="column-left">
-    
-    <div class="left">
-      <h2>Data Collecting </h2>
-      	    
-      <span class="style">&nbsp;
-      <p>
-	Using the <a href="https://scikit-learn.org/stable/index.html">YouTube data API</a> to retrieve the information from YouTube channel [<a href="https://github.com/yingli9718/youtube_api">GIT</a>]</p> 
-      <p>
-	Using the <a href="https://pypi.org/project/selenium/">Selenium</a> library to collect the information from Glassdoor.com [<a href="https://github.com/yingli9718/ds_salary_proj">GIT</a>]</p> 
-	
-	
-    	<a href="https://github.com/yingli9718/youtube_api"><img src="side_project_files/api.png" alt="bar" height="113" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
-	  
-    	 <a href="https://github.com/yingli9718/ds_salary_proj"><img src="side_project_files/webscraping.png" alt="bar" height="113" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
-
-        </span>
-      <p>
-	</p>
-     </div>
-
-	  
     <div class="left">
       <h2> COVID-19 Data Analysis and Visualization </h2>
       <span class="style">&nbsp;
@@ -146,6 +125,41 @@
 
 	  
 	  
+    <div class="left">
+      <h2> Retrieving YouTube Data With Python Using Youtube API </h2>
+      <span class="style">&nbsp;
+	
+    	 <a href="https://github.com/yingli9718/youtube_api"><img src="side_project_files/api.png" alt="bar" height="103" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
+	  <p> Using the <a href="https://scikit-learn.org/stable/index.html">YouTube data API</a> to request and retrieve the information from YouTube channel
+	  <br>  
+	  <br><i class="fas fa-edit"></i>&nbsp;&nbsp;  <!--https://www.presentslide.in/2019/09/extracting-youtube-data-api-python.html?utm_campaign=News&utm_medium=Community&utm_source=DataCamp.com -->
+	  <br><i class="fas fa-edit"></i>&nbsp;&nbsp;  
+	  <br><i class="fas fa-edit"></i>
+	  <br><i class="fas fa-edit"></i> 
+	  </p>
+        </span>
+      <p>
+	</p>
+     </div>
+
+	  
+	  
+    <div class="left">
+      <h2> Scraping Glassdoor Data With Selenium </h2>
+      <span class="style">&nbsp;
+	
+    	 <a href="https://github.com/yingli9718/ds_salary_proj"><img src="side_project_files/webscraping.png" alt="bar" height="123" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
+	  <p> Using the Selenium library to collect the information from Glassdoor.com
+	  <br>  
+	  <br><i class="fas fa-edit"></i>&nbsp;&nbsp;  <!--https://www.presentslide.in/2019/09/extracting-youtube-data-api-python.html?utm_campaign=News&utm_medium=Community&utm_source=DataCamp.com -->
+	  <br><i class="fas fa-edit"></i>&nbsp;&nbsp;  
+	  <br><i class="fas fa-edit"></i>
+	  <br><i class="fas fa-edit"></i> 
+	  </p>
+        </span>
+      <p>
+	</p>
+     </div>
 
 	
   </div>
