@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ying Li @ CSU</title>
+<link rel="stylesheet" href="styles/style2.css" type="text/css" media="all" title="Default">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style type="text/css">
+    .style1
+    {
+    text-align: center;
+    }
+    .style2
+    {
+    margin-top: 0px;
+    }
+    .style3
+    {
+    color: #b50;
+        }
+    .style4
+    {
+    font-family: 黑体;
+    }
+    .style9 {
+    font-family: "Palatino Linotype";
+    }
+    body {
+    background-color: #F5F7F2;
+    }
+    a:link {
+    color: #EE7700; text-decoration:none;
+    }
+    a:visited {
+    color: #EE7700; text-decoration:none;
+    }
+    a:hover {
+    color: #CC5500; text-decoration:none;
+    }
+  </style>
+</head>
+<!-- end .header -->
+
+<body>
+<div id="container" class="clearfix">
+  <div id="top" class="clearfix">
+    <h1 class="style4">
+      <span class="style9">Ying LI</span> 李颖</h1>
+    <img src="images/AI.jpg" alt="Top" height="197" width="880">
+      <div id="menu">
+        <ul>
+          <li><a href="index.html"><span>Home</span></a></li>
+          <li><a href="research.html"><span>REsEARCH</span></a></li>
+          <li><a href="pub.html"><span>Publication</span></a></li>
+          <li><a href="cv.html" class="style2"><span>CV</span></a></li>
+          <li><a href="side_project.html"><span>Side Project</span></a></li>
+          <li><a href="piano.html"><span>Piano</span></a></li>
+        </ul>
+     </div>
+  </div>
+  <!-- end .top -->
+
+  <div id="column-left">
+    
+    <div class="left">
+      <h2>Data Collecting </h2>
+      <span class="style6">
+      <p>
+	<strong>Using provided API</strong>
+	<br><i class="fas fa-download"></i> Using the <a href="https://scikit-learn.org/stable/index.html">YouTube data API</a> to retrieve the information from YouTube channel [<a href="https://github.com/yingli9718/youtube_api">GIT</a>]
+	</p><p>
+	<strong>Scraping from a webpage</strong>
+	<br><i class="fas fa-download"></i> <Using the <a href="https://pypi.org/project/selenium/">Selenium</a> library to collect the information from Glassdoor.com [<a href="https://github.com/yingli9718/ds_salary_proj">GIT</a>]
+      </p> 	  
+    	<a href="https://github.com/yingli9718/youtube_api"><img src="side_project_files/api.png" alt="bar" height="113" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
+    	<a href="https://github.com/yingli9718/ds_salary_proj"><img src="side_project_files/webscraping.png" alt="bar" height="113" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
+       </span>
+	</div>
+	
+<!--
+    <div class="left">
+      <h2>Data Cleaning </h2>
+      	    
+       <p> 
+	<strong>Best Practice and Methods</strong>
+        <br><i class="fas fa-exclamation-triangle"></i> Fill-out missing values
+        <br><i class="fas fa-exclamation-triangle"></i> Removing rows with missing values
+        <br><i class="fas fa-exclamation-triangle"></i> Fixing errors in the structure
+        <br><i class="fas fa-exclamation-triangle"></i> Reducing data for proper data handling
+	</p>
+
+       <p> 
+	 <strong>Python Cheat Sheet</strong>
+	 <pre><code class="python">
+    df.columns = ['a','b','c'] # Renames columns
+    pd.isnull() # Checks for null Values, Returns Boolean Array
+    pd.notnull() # Opposite of s.isnull()
+    df.dropna() # Drops all rows that contain null values
+    df.dropna(axis=1) # Drops all columns that contain null values
+    df.dropna(axis=1,thresh=n) # Drops all rows have have less than n non null values
+    df.fillna(x) # Replaces all null values with x
+    s.fillna(s.mean()) # Replaces all null values with the mean (mean can be replaced with other statistic function)
+    s.astype(float) # Converts the datatype of the series to float
+    s.replace(1,'one') # Replaces all values equal to 1 with 'one'
+    s.replace([1,3],['one','three']) # Replaces all 1 with 'one' and 3 with 'three'
+    df.rename(columns=lambda x: x + 1) # Mass renaming of columns
+    df.rename(columns={'old_name': 'new_ name'}) # Selective renaming
+    df.set_index('column_one') # Changes the index
+    df.rename(index=lambda x: x + 1) # Mass renaming of index
+        </code></pre>
+	</p>
+	</div>
+-->
+	  
+    
+    <div class="left">
+      <h2> EDA </h2>
+      <span class="style6">
+       <p> 
+	</p>
+       </span>
+     </div>
+	  
+    <div class="left">
+      <h2> COVID-19 Data Analysis and Visualization </h2>
+      <span class="style">&nbsp;
+    	<a href="https://github.com/yingli9718/COVID19"> <img src="side_project_files/covid-data-image.jpg" alt="bar" height="133" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
+	  <p> Using the Matplotlib & Pandas libraries to analyze and visualize Covid-19 data <a href="https://github.com/yingli9718/COVID19">[GIT]</a>
+	  <br>  
+	  <br><i class="fas fa-chart-line"></i>&nbsp;&nbsp; Line plot 
+	  <br><i class="fas fa-chart-bar"></i>&nbsp;&nbsp; Bar plot 
+	  <br><i class="fas fa-chart-pie"></i>&nbsp;&nbsp; Pie plot 
+	  <br><i class="fas fa-edit"></i>&nbsp;&nbsp; Whiskers plot
+<!--	  <br><i class="fas fa-edit"></i>&nbsp;&nbsp; Area plot
+	  <br><i class="fas fa-edit"></i>&nbsp;&nbsp; Scatter plot
+	  <br><i class="fas fa-edit"></i>&nbsp;&nbsp; Histogram plot-->
+	  </p>
+       </span>
+	  </div>
+	  
+    <div class="left">
+      <h2> COVID-19 Tableau Dashboard </h2>
+      <span class="style">&nbsp;
+    	<a href="https://public.tableau.com/profile/ying.li7690#!/"> <img src="side_project_files/tableau-logo.png" alt="bar" height="113" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
+	  <p> Using the Python and Tableau to build interactive Covid-19 Dashboard
+	    
+	  <br>  
+	  <br><i class="fas fa-laptop-code"></i>&nbsp;&nbsp; Using Pandas libraries to do data preprocessing from the raw data <a href="https://github.com/yingli9718/COVID19/blob/master/covid19_data_prep.ipynb">[GIT]</a>
+	  <br><i class="fas fa-digital-tachograph"></i>&nbsp;&nbsp; <a href="https://public.tableau.com/profile/ying.li7690#!/vizhome/Covid19_16019957839610/Dashboard1?publish=yes">Tableau Dashboard (Global)</a>
+	  <br><i class="fas fa-digital-tachograph"></i>&nbsp;&nbsp; <a href="https://public.tableau.com/profile/ying.li7690#!/vizhome/Covid19US_16027006307930/Dashboard2?publish=yes">Tableau Dashboard (US)</a>
+	  <br><i class="fas fa-digital-tachograph"></i>&nbsp;&nbsp; Tableau Dashboard (VA state)
+	  </p>
+       </span>
+	  </div>
+
+	  
+    <div class="left">
+      <h2> Sentiment Analysis of Amazon Review Data </h2>
+      <span class="style">&nbsp;
+	
+    	 <a href="https://github.com/yingli9718/sentiment_analysis"><img src="side_project_files/scikit_learn.png" alt="bar" height="128" width="200"; hspace="20"; vspace="20";text-align: left; align="left"></a>
+	  <p> Using the <a href="https://scikit-learn.org/stable/index.html">scikit-learn</a> library to build binary classification model 
+	  <br>  
+	  <br>&nbsp;&nbsp;  <a href="https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html"> - Bag of words</a> in scikit-learn (<a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer">CountVectorizer</a>)
+	  <br>&nbsp;&nbsp;  - Classifiers comparison
+	  <br></i>&nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://scikit-learn.org/stable/modules/naive_bayes.html">Naive Bayes</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression">Logistic Regression</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://scikit-learn.org/stable/modules/svm.html">SVMs</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://scikit-learn.org/stable/modules/tree.html">Decision Tree</a>&nbsp;&nbsp;&nbsp;&nbsp;Random Forest&nbsp;&nbsp;&nbsp;&nbsp;KNN
+	  <br>&nbsp;&nbsp; - Model Evaluation
+	  <br>&nbsp;&nbsp;&nbsp;&nbsp;  Accuracy&nbsp;&nbsp;&nbsp;&nbsp;  Precision&nbsp;&nbsp;&nbsp;&nbsp;  Recall&nbsp;&nbsp;&nbsp;&nbsp;  ROC &nbsp;&nbsp;&nbsp;&nbsp; AUC
+	  </p>
+      <p>
+	</p>
+     </div>
+
+    <div class="left">
+      <h2> Data Science Cheat Sheet with Python </h2>
+       </span>
+       <p> 
+	<strong>Core Libraries & Statistics:</strong>
+	  <br>Numpy <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf">[PDF]</a>
+	  <br>Pandas <a href="https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf.pdf">[PDF]</a>
+	  <br>SciPy <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_SciPy_Cheat_Sheet_Linear_Algebra.pdf">[PDF]</a>
+	  </p><p> 
+	 <strong>Importing Data:</strong>
+	 <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Cheat+Sheets/Importing_Data_Python_Cheat_Sheet.pdf">[PDF]</a>
+	    </p><p>
+	 <strong>Data Cleaning:</strong>
+	 <br>Text Data <a href="https://www.analyticsvidhya.com/blog/2015/06/quick-guide-text-data-cleaning-python/?utm_source=linkedin.com&utm_medium=social">[Link]</a>
+	   <br>Numerical Data 
+	 <br>Categorical Data 
+	  </p><p> 
+	<strong>Visualization:</strong>
+	  <br>Matplotlib <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf">[PDF]</a>
+	  <br>Seaborn <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Seaborn_Cheat_Sheet.pdf">[PDF]</a>
+	  <br>Plotly <a href="https://images.plot.ly/plotly-documentation/images/python_cheat_sheet.pdf">[PDF]</a>
+	  <br>Folium <a href="https://andrewchallis.co.uk/wp-content/uploads/2017/12/Folium.pdf">[PDF]</a>
+	  </p><p> 
+	<strong>Machine Learning:</strong>
+	  <br>Scikit-learn <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf">[PDF]</a>
+	  <br>Scikit-learn <a href="https://www.analyticsvidhya.com/blog/2016/12/cheatsheet-scikit-learn-caret-package-for-python-r-respectively/?utm_source=linkedin.com&utm_medium=social">[Link]</a>
+	  </p><p> 
+	<strong>Distributed Machine Learning:</strong>
+	  <br>PySpark - RDD Basics <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf">[PDF]</a>
+	  <br>PySpark - SQL Basics <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_SQL_Cheat_Sheet_Python.pdf">[PDF]</a>
+	  </p><p> 
+	<strong>Natural Language Processing:</strong>
+	  <br>NLTK <a href="https://cheatography.com/murenei/cheat-sheets/natural-language-processing-with-python-and-nltk/">[Link]</a>
+	  </p><p> 
+	<strong>Deep Learning:</strong>
+	  <br>Keras <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet_Python.pdf">[PDF]</a>
+	  <br>Tensorflow <a href="https://cdn-images-1.medium.com/max/2000/1*dtOZSuYDonyyBvEULpJALw.png">[PDF]</a>
+	  <br>Pytorch <a href="https://pytorch.org/tutorials/beginner/ptcheat.html">[link]</a>
+	  </p><p>
+	<strong>Deep Learning:</strong>
+	  <br>Keras <a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet_Python.pdf">[PDF]</a>
+	  <br>Tensorflow <a href="https://cdn-images-1.medium.com/max/2000/1*dtOZSuYDonyyBvEULpJALw.png">[PDF]</a>
+	  <br>Pytorch <a href="https://pytorch.org/tutorials/beginner/ptcheat.html">[link]</a>
+	  </p> <p>
+	<strong>Others:</strong>
+	  <br>Statistics <a href="http://web.mit.edu/~csvoss/Public/usabo/stats_handout.pdf">[PDF]</a>
+	  <br>Probability <a href="https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf">[PDF]</a>
+	  <br>Algorithms for Supervised- and Unsupervised Learning <a href="https://eferm.com/wp-content/uploads/2011/05/cheat3.pdf">[PDF]</a>
+	  <br>Jupter Notebook <a href="https://www.cheatography.com//weidadeyue/cheat-sheets/jupyter-notebook/pdf/">[PDF]</a> <a href="https://datacamp-community-prod.s3.amazonaws.com/48093c40-5303-45f4-bbf9-0c96c0133c40">[Link]</a>
+	  </p> 
+	  </span>
+
+	  </div>
+	
+  </div>
+  <!-- end .left -->
+
+</div>
+<!-- end .container -->
+    <p class="style1">
+        <br>
+        Copyright &copy 2014 Ying Li&nbsp;</p>
+        
+</body></html>
+	  
