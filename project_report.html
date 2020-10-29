@@ -1865,12 +1865,66 @@ color: #4d69b7;
         </section>
         <section>
             <div class="col">
-                <div class="entry-content post-content" id="post-content">
-                  <p>Increasing the booking rate of a rental property on Airbnb is what the host would like to as it directly related to its revenue. On the other hand, customers xxx.</p>
-		    
-		  <p>  This project aims to develop a reliable prediction model using machine learning, deep learning, and natural language processing techniques to aid the property owners to increase the their ranking rate on the listing market, and thus xxx </p>
-		    
-		  <p> Features of the rentals, owner characteristics, the customer reviews, and listing price will comprise the predictors, and a range of methods from linear regression to tree-based models, support-vector machine (SVM), K-means Clustering (KMC), XGboost, and neural networks (NNs) will be used for creating the prediction model.</p>
+              <div class="entry-content post-content" id="post-content">
+		
+<h2 class="chapter-subtitle" style="text-align: left;">Background and Motivation</h2>
+<p>Airbnb provides an online marketplace for short-term home and apartment rentals. The mission of the platform is to create a triple win scenario to help 1) the hosts (renters) rent out their properties and maximum their earnings, 2) the travelers find the best listing that suites their needs, and 3) Airbnb maximize the revenues. </p>
+<p>From the listing hosts' perspective, they need to 1) determine the best price for their Airbnb, 2) describe the listing in an optimized way to maximize their booking rates, and thus their revenue. </p>
+
+
+<h2 class="chapter-subtitle" style="text-align: left;">Goal of the Project</h2>
+<p>  The aim of this project is to analyze the publicly available data from Airbnb to develop two solutions/tools: </p>
+
+<ol class="numerated-list-with-text">
+<li>
+<h4 class="title">Booking Optimizer</h4>
+  <p><strong>Build a model to predict booking for a listing</strong>.  The goal is to provide insights and recommendations for the listing owner to take actions to optimize his books and thus revenue.</p></li>
+<li>
+<h4 class="title">Listing Price Optimizer</h4>
+ <p><strong>Build a model to predict the “right and fair price” for each of the listing</strong>.  The goal is to help the listing hosts to maximize the revenues.</p>
+</li>
+</ol>
+
+
+<h2 class="chapter-subtitle" style="text-align: left;">Values of the Project</h2>
+
+<ol class="numerated-list-with-text">
+<li>
+<h4 class="title">Booking Optimizer</h4>
+<p><strong>It can be implemented on Airbnb backend or as a 3rd-party service or stand-alone service for the listing host before they publish the listing</strong>. </p>
+<p>&nbsp;</p>
+<p>For every listing, this solution will provide a report with two sets of outputs to help the listing owner:</p>
+<ol class="numerated-list-with-text">
+<li>
+<h4 class="title">Score</h4>
+<p>A score that helps listing hosts understand the predicted booking level of their listing based on the provided information.
+</li>
+<li>
+<h4 class="title">Recommendation</h4>
+<p>A recommendation list that helps listing hosts to take actions to optimize and improve the booking.
+</li>
+</ol>
+
+<li>
+<h4 class="title">Listing Price Optimizer</h4>
+<p><strong>It can be implemented on Airbnb backend as a 3rd-party service or as a stand-alone service for the listing host before they publish the listing</strong>. </p>
+<p>&nbsp;</p>
+<p>For each of the listing, the tool can provide a report::</p>
+<ol class="numerated-list-with-text">
+<li>
+<h4 class="title">Recommended Price</h4>
+<p> xxx
+</li>
+<li>
+<h4 class="title">Recommended top improvements/action items</h4>
+<p> The recommendation in terms of what drives the price and what can be improved to improve the price will be intuitive and actionable.
+</li>
+</ol>
+
+
+</li>
+</ol>
+
 <p>&nbsp;</p>
 <ul class="article-structure">
 <li><a href="#part1">The Dataset</a><span class="divider"></span> <span class="article-target">Part 1</span></li>
@@ -1893,10 +1947,15 @@ color: #4d69b7;
 <p>This <strong><a href="https://github.com/yingli9718/airbnb_scraping" target="_blank">repo</a></strong> shows how to use <strong><a href="https://pypi.org/project/selenium/" target="_blank">Selenium</a></strong> and<strong><a href="https://github.com/yingli9718/airbnb_scraping" target="_blank">Beautifulsoup4</a></strong> to webscraping all listings for a given city. For this project, I am using the webscraping current listing data for future prediction.</p></li>
 </ul>
 
-</ul>
-<h2 class="chapter-subtitle" style="text-align: left;">Some key features this project will look into are the following:</h2>
+<ul>
+<h2 class="chapter-subtitle" style="text-align: left;">Two categories of data:</h2>
 <ol class="numerated-list">
-<li><strong>accommodates</strong>: the number of guests the rental can accommodate</li>
+<li><strong>Listing information</strong>: bed type, bathroom, location, minimum nights, maximum nights, amenities, etc. Unlike many other analysis on Airbnb, I will also leverage the un-structured listing description (text) data. The hypothesis is that the way one describes a list may have an influence on viewer’s perception and thus drives book.</li>
+
+<li><strong>Guest Comments</strong>: I will leverage the unstructured past guest comments data as well in the model. For example, I will assess the positivity of each of the comment by applying some text and sentiment analysis techniques and take that into the model.
+</li>
+<!--
+    the number of guests the rental can accommodate</li>
 <li><strong>bedrooms</strong>: number of bedrooms included in the rental</li>
 <li><strong>bathrooms</strong>: number of bathrooms included in the rental</li>
 <li><strong>beds</strong>: number of beds included in the rental</li>
@@ -1905,10 +1964,11 @@ color: #4d69b7;
 <li><strong>maximum_nights</strong>: maximum number of nights a guest can stay for the rental</li>
 <li><strong>number_of_reviews</strong>: number of reviews that previous guests have left</li>
 <li><strong>amenities</strong>: parking/wifi/kitchen/washer</li>
+-->
 </ol>
-
-
 </ul>
+
+
 <p>&nbsp;</p>
 <p><span class="chapter-title" id="part2">Part 2</span></p>
 
@@ -1928,8 +1988,7 @@ color: #4d69b7;
 </li>
 </ul>
 
-		  <figure id="post-2410 media-2410" class="align-none"><img src="./project_report_files/df_review.png"></figure>
-
+<figure id="post-2410 media-2410" class="align-none"><img src="./project_report_files/df_review.png"></figure>
 
 </ul>
 <p>&nbsp;</p>
@@ -1967,7 +2026,6 @@ color: #4d69b7;
 
 <figure id="post-2410 media-2410" class="align-none"><img src="./project_report_files/time_since_last_review.png"></figure>
 
-
 </li>
 
 
@@ -1983,6 +2041,67 @@ color: #4d69b7;
     <img src="./project_report_files/map_norm_reviews.png" alt="reviews" style="width:100%">
   </div>
 </div>
+</li>
+
+</ol>
+
+
+</ul>
+
+<p>&nbsp;</p>
+<p><span class="chapter-title" id="part4">Part 4</span></p>
+
+
+<h3><strong>Model Building and Vaidation</strong></h3>
+
+<ul class="best-practice">
+<li>
+<h4 class="title">Model Building</h4>
+<p>xxxx</p></li>
+
+<ul class="unsorted-list">
+<li>
+<h4 class="title">Booking Opimizier</h4>
+<p>For this project, I have to use the number of comments as a proxy of booking. However, if Airbnb likes this solution and can provide the actual booking data, the pipeline can be rerun and adjusted accordingly.</p>
+</li>
+<li>
+<h4 class="title">Listing Price Opimizier</h4>
+<p>To build this model, the price of the listing will be the target and the listing information, description texts, as well as past guests' comment will be used as the independent/predictor data.</p>
+</li>
+</ul>
+
+
+<li>
+<h4 class="title">Model Validation</h4>
+xxxx</p></li>
+  
+<ul class="unsorted-list">
+<li>
+<h4 class="title">Booking Opimizier</h4>
+<p>The booking optimizer model will be validated majorly on the rank-ordering. The model will provide a score on a scale of e.g. 1-99 on the predicted level of booking. For example, if you can a score of 90 that means your listing is on the top 10% for similar listings. This can be easily received by nontechnical stakeholders. </p>
+
+</li>
+<li>
+<h4 class="title">Listing Price Opimizier</h4>
+<p>The price optimizer model will be validated majorly on level accuracy of the prediction, which is easily interpretable to nontechnical stakeholders.</p>
+</li>
+</ul>
+
+</ul>
+
+<p>&nbsp;</p>
+<p><span class="chapter-title" id="part5">Part 5</span></p>
+
+
+<h3><strong>Product Deployment</strong></h3>
+
+<ul class="best-practice">
+<li>
+<h4 class="title">Product Deployment</h4>
+<p>As I stated above, the final project can be implemented on Airbnb backend or as a 3rd-party service or stand-alone service for the listing host before they publish the listing.</p>
+<p>&nbsp;</p>
+<p>I believe the two solutions do create sizable business values and I believe listing owners will be willing to pay for the value-add-services, especially if the model can be refitted when the true booking data is used.</p>
 
 
 </li>
+</ul>
