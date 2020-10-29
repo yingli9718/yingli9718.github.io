@@ -4,7 +4,7 @@
     
     <meta name="description" content="Useful templates and resources for businesses">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to Increase the Airbnb Listing Popularity</title>
+    <title>Airbnb: optimize listing booking and price</title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="https://status.net/templates/xmlrpc.php">
 
@@ -1858,7 +1858,7 @@ color: #4d69b7;
                 <section>
             <div class="col">
                 <h1 class="post-title">
-                    How to Increase the Airbnb listing popularity           </h1>
+                    Airbnb: optimize listing booking and price          </h1>
                 <!--<p class="meta meta&#45;&#45;blog detail">
                     By archtc on December 26, 2017 — 22 minutes to read                </p>-->
             </div>
@@ -1877,15 +1877,34 @@ color: #4d69b7;
 
 <ol class="numerated-list-with-text">
 <li>
-<h4 class="title">Booking Optimizer</h4>
-  <p><strong>Build a model to predict booking for a listing</strong>.  The goal is to provide insights and recommendations for the listing host to take actions to optimize his books and thus revenue.</p></li>
+<h4 class="title">Booking Optimizer (predict booking score for a listing)</h4>
+<p><strong>Goal</strong>: to provide insights and recommendations for the listing host to take actions to optimize his books and thus revenue.</p>
+<p>&nbsp;</p>
+<p><strong>Value</strong>: 1) provide a score that helps listing hosts understand the predicted booking level of their listing based on the provided information. 2) provide a recommendation list that helps listing hosts to take actions to optimize and improve the booking.</p>
+</li>
 <li>
-<h4 class="title">Listing Price Optimizer</h4>
- <p><strong>Build a model to predict the “right and fair price” for each of the listing</strong>.  The goal is to help the listing hosts to maximize the revenues.</p>
+<h4 class="title">Listing Price Optimizer (to predict the “right” for a listing)</h4>
+ <p><strong>Goal</strong>: to help the listing hosts to maximize the revenues.</p>
+<p>&nbsp;</p>
+<p><strong>Value</strong>: 1) provide a recommended "best" listing price.  2) provide a recommended top improvements/action items of what drives the price and what can be improved to improve the price.</p>
 </li>
 </ol>
 
 
+<h2 class="chapter-subtitle" style="text-align: left;">What's novel</h2>
+<ol class="numerated-list-with-text">
+<li>
+<h4 class="title">Unstructured text data</h4>
+<p>leverage the unstructured text data from both the listing description and guests’ comment</p>
+</li>
+<li>
+<h4 class="title">Booking optimization and recommendation</h4>
+ <p>This is new. But The biggest limitation and risk of this solution is that I have to use the number of comments as a proxy of booking.</p>
+</li>
+</ol>
+
+
+<!--
 <h2 class="chapter-subtitle" style="text-align: left;">Values of the Project</h2>
 
 <ol class="numerated-list-with-text">
@@ -1909,7 +1928,7 @@ color: #4d69b7;
 <h4 class="title">Listing Price Optimizer</h4>
 <p><strong>It can be implemented on Airbnb backend as a 3rd-party service or as a stand-alone service for the listing host before they publish the listing</strong>. </p>
 <p>&nbsp;</p>
-<p>For each of the listing, the tool can provide a report::</p>
+<p>For each of the listing, the tool can provide a report:</p>
 <ol class="numerated-list-with-text">
 <li>
 <h4 class="title">Recommended Price</h4>
@@ -1925,18 +1944,20 @@ color: #4d69b7;
 </li>
 </ol>
 
+-->
+
 <p>&nbsp;</p>
 <ul class="article-structure">
-<li><a href="#part1">The Dataset</a><span class="divider"></span> <span class="article-target">Part 1</span></li>
+<li><a href="#part1">Data Downloading and Scraping</a><span class="divider"></span> <span class="article-target">Part 1</span></li>
 <li><a href="#part2">Data Cleaning and Preprocessing</a><span class="divider"></span> <span class="article-target">Part 2</span></li>
-<li><a href="#part3">Explornary Analysis</a><span class="divider"></span> <span class="article-target">Part 3</span></li>
-<li><a href="#part4">Model Building and Evaluation</a><span class="divider"></span> <span class="article-target">Part 4</span></li>
-<li><a href="#part5">Product Deployment</a><span class="divider"></span> <span class="article-target">Part 5</span></li>
+<li><a href="#part3">Explornary Data Analysis</a><span class="divider"></span> <span class="article-target">Part 3</span></li>
+<li><a href="#part4">Feature Engineering</a><span class="divider"></span> <span class="article-target">Part 4</span></li>
+<li><a href="#part5">Model Building and Evaluation</a><span class="divider"></span> <span class="article-target">Part 5</span></li>
+<li><a href="#part6">Product Deployment</a><span class="divider"></span> <span class="article-target">Part 6</span></li>
 </ul>
 <p>&nbsp;</p>
 <p><span class="chapter-title" id="part1">Part 1</span></p>
 
-<h3><strong>The Dataset</strong></h3>
 <p>The following two parts of the dataset are used for this projects:</p>
 <ul class="best-practice">
 <li>
@@ -1973,24 +1994,20 @@ color: #4d69b7;
 <p><span class="chapter-title" id="part2">Part 2</span></p>
 
 
-<h3><strong>Cleaning and pre-processing</strong></h3>
-
-<p>The data is quite messy, and has some limitations. The major issue is that it doesn't have the actually booking rate data. However, if the we assume 50% of the customer would leave the comments after their stay, the number of reviews provides a good indicators of the number of the bookings.</p>
+<p>The data is quite messy, and has some limitations. <!--The major issue is that it doesn't have the actually booking rate data. However, if the we assume 50% of the customer would leave the comments after their stay, the number of reviews provides a good indicators of the number of the bookings.--></p>
 
 <ul class="best-practice">
 <li>
 <h4 class="title">Listing Data Cleaning</h4>
-<p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GitHub repo</a></strong> shows the data cleaning section for the listing dataset: dropping the columns with marjority of null values, cleaning each individual price-related, date-related columns, transforming into categorical type for some features, cleaning the features listed in the amenites and descriptions using the <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html">CountVectorizer</a></strong>.</p></li>
+<p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GitHub repo</a></strong> shows the data cleaning section for the listing dataset: dropping the columns with marjority of null values, cleaning price-related columns, cleaning date-related columns, cleaning categorical features, cleaning the features listed in the amenites and descriptions using the <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html">CountVectorizer</a></strong>.</p></li>
 <li>
 <h4 class="title">Review Data Cleaning</h4>
-<p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GiHub repo</a></strong> shows the data cleaning section for the review dataset. Sentimental Analysis are done on review data by assigning a score to each review comments using the publicly available pre-trianed (<strong><a href=" http://www.nltk.org/_modules/nltk/sentiment/vader.html">Vader sentiment model based on NLTK</a></strong>). Two important features are created for each listing ID in given month, number of reviews counts and average cores for that particular month. 
+<p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GiHub repo</a></strong> shows the data cleaning section for the review dataset. Sentimental Analysis are done on review data by assigning a score to each review comments using the publicly available pre-trianed (<strong><a href=" http://www.nltk.org/_modules/nltk/sentiment/vader.html">Vader sentiment model based on NLTK</a></strong>). 
 </p>
 </li>
 </ul>
 
-<figure id="post-2410 media-2410" class="align-none"><img src="./project_report_files/df_review.png"></figure>
 
-</ul>
 <p>&nbsp;</p>
 <p><span class="chapter-title" id="part3">Part 3</span></p>
 
@@ -2000,17 +2017,13 @@ color: #4d69b7;
 <ul class="best-practice">
 <li>
 <h4 class="title">EDA</h4>
-<p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GitHub repo</a></strong> shows the explornary data analysis section, which provides a lot of insights on the data. Following are some key interesting findings.</p></li>
+<p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GitHub repo</a></strong> shows the explornary data analysis section, which provides a lot of insights on the data. Following are some selected interesting findings.</p></li>
 </ul>
 
 
 <ol class="numerated-list-with-text">
 <li>
 <h4 class="title">Changes of the number of reviews over the year</h4>
-<p>* number of reviews shows the strong seasonal cycle peaks in March-Apr-May
-* strong weakly cycle, as most of the listings are booked for weekends, and reviews are submitted on weekends
-* drop to almost zero, indicuting no booking after the lockdown</p>
-
 
 <figure id="post-2410 media-2410" class="align-none"><img src="./project_report_files/number_of_reviews.png"></figure>
 
@@ -2022,7 +2035,6 @@ color: #4d69b7;
 
 <li>
 <h4 class="title">Time since the last review</h4>
-<p>1+ year no reviews vs 2-8 weeks and 0-2 reviews since last review</p>
 
 <figure id="post-2410 media-2410" class="align-none"><img src="./project_report_files/time_since_last_review.png"></figure>
 
@@ -2030,8 +2042,8 @@ color: #4d69b7;
 
 
 <li>
-<h4 class="title">Changes of the number of reviews over the year</h4>
-<p>Location, Location, Location</p>
+<h4 class="title">Location, Location, Location</h4>
+<p></p>
 
 <div class="row">
   <div class="column">
@@ -2044,20 +2056,44 @@ color: #4d69b7;
 </li>
 
 </ol>
-
-
 </ul>
+
+
+
+
+
 
 <p>&nbsp;</p>
 <p><span class="chapter-title" id="part4">Part 4</span></p>
 
-
-<h3><strong>Model Building and Vaidation</strong></h3>
-
 <ul class="best-practice">
 <li>
+<h4 class="title">Feature Engineering</h4>
+<p>Creating new features for the date-related columns [<strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GiHub repo</a></strong>]</p></p>
+<p>&nbsp;</p>
+<p>Creating new features: e.g., for  each listing ID in given month, number of reviews counts and average cores for that particular month [<strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GiHub repo</a></strong>]</p>
+<p>&nbsp;</p>
+<p>Checking multi-collinearity, data standardization (StandardScaler()), one-hot encoded for categorical features (pd.get_dummies())</p>
+
+</li>
+
+</ul>
+
+<figure id="post-2410 media-2410" class="align-none"><img src="./project_report_files/df_review.png"></figure>
+
+<p>&nbsp;</p>
+<p><span class="chapter-title" id="part5">Part 5</span></p>
+
+
+<ul class="unsorted-list">
+
+
+</ul>
+<ul class="best-practice">
+  <li>
+    
 <h4 class="title">Model Building</h4>
-<p>xxxx</p></li>
+<p>Regression, tree-based model, XGBoost, Neural network </p></li>
 
 <ul class="unsorted-list">
 <li>
@@ -2073,7 +2109,6 @@ color: #4d69b7;
 
 <li>
 <h4 class="title">Model Validation</h4>
-xxxx</p></li>
   
 <ul class="unsorted-list">
 <li>
@@ -2083,22 +2118,19 @@ xxxx</p></li>
 </li>
 <li>
 <h4 class="title">Listing Price Opimizier</h4>
-<p>The price optimizer model will be validated majorly on level accuracy of the prediction, which is easily interpretable to nontechnical stakeholders.</p>
+<p>The price optimizer model will be validated majorly on level MSE and accuracy of the prediction, which is easily interpretable to nontechnical stakeholders.</p>
 </li>
 </ul>
 
 </ul>
 
 <p>&nbsp;</p>
-<p><span class="chapter-title" id="part5">Part 5</span></p>
-
-
-<h3><strong>Product Deployment</strong></h3>
+<p><span class="chapter-title" id="part6">Part 6</span></p>
 
 <ul class="best-practice">
 <li>
 <h4 class="title">Product Deployment</h4>
-<p>As I stated above, the final project can be implemented on Airbnb backend or as a 3rd-party service or stand-alone service for the listing host before they publish the listing.</p>
+<p>The final project can be implemented on Airbnb backend or as a 3rd-party service or stand-alone service for the listing host before they publish the listing.</p>
 <p>&nbsp;</p>
 <p>I believe the two solutions do create sizable business values and I believe listing owners will be willing to pay for the value-add-services, especially if the model can be refitted when the true booking data is used.</p>
 
