@@ -1950,7 +1950,7 @@ color: #4d69b7;
 <ul>
 <h2 class="chapter-subtitle" style="text-align: left;">Two categories of data:</h2>
 <ol class="numerated-list">
-<li><strong>Listing information</strong>: bed type, bathroom, location, minimum nights, maximum nights, amenities, etc. Unlike many other analysis on Airbnb, I will also leverage the un-structured listing description (text) data. The hypothesis is that the way one describes a list may have an influence on viewer’s perception and thus drives book.</li>
+<li><strong>Listing information</strong>: bed type, bathroom, location, minimum nights, maximum nights, amenities, etc. Unlike many other analysis on Airbnb, I will also leverage the un-structured listing description (text) data. The hypothesis is that the way one describes a list may have an influence on viewer's perception and thus drives book.</li>
 
 <li><strong>Guest Comments</strong>: I will leverage the unstructured past guest comments data as well in the model. For example, I will assess the positivity of each of the comment by applying some text and sentiment analysis techniques and take that into the model.
 </li>
@@ -1980,7 +1980,7 @@ color: #4d69b7;
 <ul class="best-practice">
 <li>
 <h4 class="title">Listing Data Cleaning</h4>
-<p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GitHub repo</a></strong> shows the data cleaning section for the listing dataset: dropping the columns with marjority of null values, cleaning each individual price-related, date-related columns, transforming into categorical type for some features, cleaning the features listed in the amenites.</p></li>
+<p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GitHub repo</a></strong> shows the data cleaning section for the listing dataset: dropping the columns with marjority of null values, cleaning each individual price-related, date-related columns, transforming into categorical type for some features, cleaning the features listed in the amenites and descriptions using the <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html">CountVectorizer</a></strong>.</p></li>
 <li>
 <h4 class="title">Review Data Cleaning</h4>
 <p>This <strong><a href="https://github.com/yingli9718/airbnb_analyses" target="_blank">GiHub repo</a></strong> shows the data cleaning section for the review dataset. Sentimental Analysis are done on review data by assigning a score to each review comments using the publicly available pre-trianed (<strong><a href=" http://www.nltk.org/_modules/nltk/sentiment/vader.html">Vader sentiment model based on NLTK</a></strong>). Two important features are created for each listing ID in given month, number of reviews counts and average cores for that particular month. 
